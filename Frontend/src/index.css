@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    @apply bg-[#0a0a0a] text-white overflow-x-hidden;
+  }
+}
+
+/* Add the scanner animation here since it's cleaner than inline styles */
+@keyframes scan {
+  0% { top: -5%; opacity: 0; }
+  5% { opacity: 1; }
+  95% { opacity: 1; }
+  100% { top: 100%; opacity: 0; }
+}
+
+.animate-scan {
+  animation: scan 8s linear infinite;
+}
